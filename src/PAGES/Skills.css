@@ -1,0 +1,256 @@
+/* =========================================
+   SKILLS CONTAINER
+========================================= */
+.skills-section {
+  padding: 5rem 2rem;
+  font-family: "Outfit", sans-serif;
+
+  /* Full-width Dark Mode Background */
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-color 0.3s ease;
+}
+
+.skills-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-section .section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 799;
+  margin-bottom: 4rem;
+  /* Glowing Text */
+  background: linear-gradient(135deg, #f8fafc, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   EXACT 3-COLUMN GRID
+========================================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  justify-content: center;
+}
+
+/* =========================================
+   GLASSMORPHISM SKILL CARDS
+========================================= */
+.skill-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 3.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  transition: width 0.4s ease;
+}
+
+.skill-card:hover::after {
+  width: 100%;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(168, 85, 247, 0.4);
+  background: rgba(30, 41, 59, 0.7);
+}
+
+/* =========================================
+   ICONS & TYPOGRAPHY
+========================================= */
+.skill-card .skill-icon {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.15) rotate(17deg);
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover h3 {
+  color: #ffffff;
+}
+
+/* =========================================
+   ☀️ LIGHT MODE OVERRIDES ☀️
+========================================= */
+body.light .skills-section {
+  background-color: #d9e1ea;
+}
+
+body.light .skills-section .section-title {
+  background: linear-gradient(135deg, #7e22ce, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light .skill-card {
+  background-color: #d9e1ea;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.light .skill-card:hover {
+  background-color: #d9e1ea;
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+body.light .skill-card h3 {
+  color: #0f172a;
+}
+
+body.light .skill-card:hover h3 {
+  color: #7e22ce;
+}
+
+/* =========================================
+   🎨 TECHNOLOGY BRAND COLORS & GLOWS
+========================================= */
+
+/* 1. Base Icon Colors (Applied normally) */
+.skill-card .skill-icon.html,
+body.light .skill-card .skill-icon.html {
+  color: #e34f26;
+}
+.skill-card .skill-icon.css,
+body.light .skill-card .skill-icon.css {
+  color: #1572b6;
+}
+.skill-card .skill-icon.js,
+body.light .skill-card .skill-icon.js {
+  color: #f7df1e;
+}
+.skill-card .skill-icon.react,
+body.light .skill-card .skill-icon.react {
+  color: #61dafb;
+}
+.skill-card .skill-icon.java,
+body.light .skill-card .skill-icon.java {
+  color: #f89820;
+}
+.skill-card .skill-icon.git,
+body.light .skill-card .skill-icon.git {
+  color: #f05032;
+}
+.skill-card .skill-icon.python,
+body.light .skill-card .skill-icon.python {
+  color: #3776ab;
+}
+.skill-card .skill-icon.vscode,
+body.light .skill-card .skill-icon.vscode {
+  color: #007acc;
+}
+
+/* GitHub is White in Dark Mode, Dark Slate in Light Mode */
+.skill-card .skill-icon.github {
+  color: #ffffff;
+}
+body.light .skill-card .skill-icon.github {
+  color: #0f172a;
+}
+
+/* 2. Custom Hover Glows (Applied when the card is hovered) */
+/* .skill-card:hover .skill-icon.html,
+body.light .skill-card:hover .skill-icon.html {
+  filter: drop-shadow(0 0 15px rgba(227, 79, 38, 0.5))
+}
+.skill-card:hover .skill-icon.css,
+body.light .skill-card:hover .skill-icon.css {
+  filter: drop-shadow(0 0 15px rgba(21, 114, 182, 0.5));
+}
+.skill-card:hover .skill-icon.js,
+body.light .skill-card:hover .skill-icon.js {
+  filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.5));
+}
+.skill-card:hover .skill-icon.react,
+body.light .skill-card:hover .skill-icon.react {
+  filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.5));
+}
+.skill-card:hover .skill-icon.java,
+body.light .skill-card:hover .skill-icon.java {
+  filter: drop-shadow(0 0 15px rgba(248, 152, 32, 0.5));
+}
+.skill-card:hover .skill-icon.git,
+body.light .skill-card:hover .skill-icon.git {
+  filter: drop-shadow(0 0 15px rgba(240, 80, 50, 0.5));
+}
+.skill-card:hover .skill-icon.python,
+body.light .skill-card:hover .skill-icon.python {
+  filter: drop-shadow(0 0 15px rgba(55, 118, 171, 0.5));
+}
+.skill-card:hover .skill-icon.vscode,
+body.light .skill-card:hover .skill-icon.vscode {
+  filter: drop-shadow(0 0 15px rgba(0, 122, 204, 0.5));
+}
+
+/* GitHub Glow adapts to Light/Dark Mode */
+/* .skill-card:hover .skill-icon.github {
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+}
+body.light .skill-card:hover .skill-icon.github {
+  filter: drop-shadow(0 0 15px rgba(15, 23, 42, 0.4));
+} */
+
+/* =========================================
+   📱 MOBILE RESPONSIVENESS
+========================================= */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .skill-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .skill-card .skill-icon {
+    font-size: 3.5rem;
+  }
+}

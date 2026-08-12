@@ -1,0 +1,281 @@
+/* =========================================
+   HEADER & GLASSMORPHISM
+========================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  font-family: "Outfit", sans-serif;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+/* =========================================
+   LOGO STYLING
+========================================= */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  background: linear-gradient(135deg, #38bdf8, #a855f7, #ec4899);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  display: inline-block;
+  filter: drop-shadow(0 4px 10px rgba(168, 85, 247, 0.25));
+}
+
+.logo-text:hover {
+  background-position: 100% 50%;
+  filter: drop-shadow(0 6px 18px rgba(168, 85, 247, 0.5));
+  transform: scale(1.02);
+}
+
+/* Light Mode Override for Logo */
+body.light .logo-text {
+  background: linear-gradient(135deg, #0284c7, #7e22ce, #db2777);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(126, 34, 206, 0.15));
+}
+
+body.light .logo-text:hover {
+  filter: drop-shadow(0 4px 15px rgba(126, 34, 206, 0.3));
+}
+
+.logo-accent {
+  color: #a855f7;
+}
+
+/* =========================================
+   NAVIGATION MENU
+========================================= */
+.nav-menu ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #94a3b8;
+  font-size: 1.15rem;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-menu a:hover {
+  color: #f8fafc;
+}
+
+.nav-menu a.active {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #a855f7;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* =========================================
+   THEME TOGGLE BUTTON
+========================================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: #a855f7;
+  color: #a855f7;
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* =========================================
+   ☀️ LIGHT MODE OVERRIDES ☀️
+========================================= */
+body.light .site-header {
+  background-color: #d9e1ea;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .nav-menu a {
+  color: #475569;
+}
+
+body.light .nav-menu a:hover,
+body.light .nav-menu a.active {
+  color: #7e22ce;
+}
+
+body.light .nav-menu a::after {
+  background-color: #7e22ce;
+}
+
+body.light .theme-toggle-btn {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light .theme-toggle-btn:hover {
+  background: #f1f5f9;
+  border-color: #7e22ce;
+  color: #7e22ce;
+}
+
+/* =========================================
+   📱 RESPONSIVE MEDIA QUERIES
+========================================= */
+
+/* 1. Large Tablets & Small Laptops */
+@media (max-width: 992px) {
+  .header-container {
+    padding: 0 1.5rem;
+  }
+  .logo-text {
+    font-size: 2.25rem;
+  }
+  .nav-menu ul {
+    gap: 2rem; /* Bring links closer */
+  }
+  .nav-menu a {
+    font-size: 1.05rem;
+  }
+}
+
+/* 2. Tablets & Large Mobile */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 2rem;
+  }
+  .nav-menu ul {
+    gap: 1.25rem;
+  }
+  .nav-menu a {
+    font-size: 0.95rem;
+  }
+  .theme-toggle-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
+
+/* 3. Mobile Phones (Wrap Nav to Second Row) */
+@media (max-width: 576px) {
+  .navbar {
+    height: auto; /* Let the height adapt */
+    padding: 1rem 0;
+    flex-wrap: wrap; /* Triggers the layout change */
+    gap: 1rem;
+  }
+
+  /* Keep Logo and Button on the top row */
+  .logo {
+    order: 1;
+  }
+  .header-actions {
+    order: 2;
+  }
+
+  /* Push Nav Menu to the bottom row taking 100% width */
+  .nav-menu {
+    order: 3;
+    width: 100%;
+  }
+
+  .nav-menu ul {
+    width: 100%;
+    justify-content: space-evenly; /* Spread links cleanly */
+    gap: 0.5rem;
+  }
+
+  .nav-menu a {
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+  }
+}
+
+/* 4. Extra Small Phones (iPhone SE, old devices) */
+@media (max-width: 400px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  .logo-text {
+    font-size: 1.75rem;
+  }
+  .nav-menu a {
+    font-size: 0.85rem;
+  }
+}

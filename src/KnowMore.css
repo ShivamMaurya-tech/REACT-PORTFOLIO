@@ -1,0 +1,292 @@
+/* =========================================
+   KNOW MORE STANDALONE CONTAINER
+========================================= */
+.knowmore-standalone-section {
+  padding: 5rem 2rem;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Matches the Global Dark Mode Background exactly */
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+  background-size: cover;
+  background-attachment: fixed;
+
+  transition: background-color 0.3s ease;
+}
+
+/* =========================================
+   PREMIUM GLASSMORPHISM CARD (Compact Size)
+========================================= */
+.knowmore-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.6),
+    rgba(15, 23, 42, 0.3)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  width: 100%;
+  /* Reduced from 1000px to 750px for a perfectly compact card */
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  animation: slideUpFade 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   HERO IMAGE AREA
+========================================= */
+.knowmore-image-wrapper {
+  width: 100%;
+  /* Reduced height from 400px to 300px to fit the smaller card */
+  height: 300px;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.knowmore-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.knowmore-card:hover .knowmore-img {
+  transform: scale(1.05);
+}
+
+/* =========================================
+   CONTENT & TYPOGRAPHY
+========================================= */
+.knowmore-content {
+  /* Reduced padding to fit the smaller card nicely */
+  padding: 2.5rem;
+}
+
+.knowmore-title {
+  /* Scaled font down slightly to match smaller card */
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(135deg, #f8fafc, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.knowmore-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+/* =========================================
+   ANIMATED METERS (Progress Bars)
+========================================= */
+.knowmore-meters-container {
+  margin-bottom: 2.5rem;
+  background: rgba(15, 23, 42, 0.4);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.meters-title {
+  font-size: 1.15rem;
+  color: #f8fafc;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.3);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.static-meter {
+  margin-bottom: 1.2rem;
+}
+
+.static-meter:last-child {
+  margin-bottom: 0;
+}
+
+.meter-label-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.meter-percentage {
+  color: #a855f7;
+  font-weight: 700;
+}
+
+.meter-track {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+
+  transform-origin: left;
+  animation: fillMeter 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes fillMeter {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* =========================================
+   ACTIONS / BUTTONS
+========================================= */
+.knowmore-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.project-links .btn {
+  flex: 1;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.back-btn-wrapper .go-back-btn {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  color: #cbd5e1;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.go-back-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border-color: #f8fafc;
+}
+
+/* =========================================
+   ☀️ LIGHT MODE OVERRIDES ☀️
+========================================= */
+
+body.light .knowmore-standalone-section {
+  background-color: #d9e1ea;
+}
+
+body.light .knowmore-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.4)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 50px rgba(31, 38, 135, 0.08);
+}
+
+body.light .knowmore-image-wrapper {
+  background-color: #d9e1ea;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .knowmore-title {
+  background: linear-gradient(135deg, #7e22ce, #db2777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.light .knowmore-desc {
+  color: #475569;
+}
+
+body.light .knowmore-meters-container {
+  background-color: #d9e1ea;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+body.light .meters-title {
+  color: #0f172a;
+}
+
+body.light .meter-label-row {
+  color: #334155;
+}
+
+body.light .meter-percentage {
+  color: #7e22ce;
+}
+
+body.light .meter-track {
+  background-color: #d9e1ea;
+}
+
+body.light .knowmore-actions {
+  border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .go-back-btn {
+  border-color: rgba(15, 23, 42, 0.3);
+  color: #0f172a;
+}
+
+body.light .go-back-btn:hover {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: #7e22ce;
+  color: #7e22ce;
+}

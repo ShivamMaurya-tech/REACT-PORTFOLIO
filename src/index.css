@@ -1,0 +1,101 @@
+/* 1. Define variables for LIGHT mode (Default) */
+:root {
+  --bg-color: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --accent: #3b82f6; /* Blue */
+}
+
+/* 2. Define variables for DARK mode */
+body.dark {
+  --bg-color: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --card-bg: #1e293b;
+  --card-border: #334155;
+  --accent: #8b5cf6; /* Purple */
+}
+
+/* 3. Apply the variables to your elements */
+body {
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+  background-size: cover;
+  background-attachment: fixed; /* Creates a cool parallax effect when scrolling */
+
+  color: var(--text-primary);
+  font-family: "Inter", sans-serif;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.theme-toggle {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.content {
+  margin-top: 4rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* 4. The Card Element */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}

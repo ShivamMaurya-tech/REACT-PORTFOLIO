@@ -1,0 +1,198 @@
+[
+  {
+    "id": 1,
+    "title": "GitHub Finder",
+    "shortDesc": "Search GitHub profiles using GitHub API.",
+    "longDesc": "Developed a responsive GitHub profile search application using the GitHub REST API. Displays user profile information including avatar, bio, repositories, followers, and following with dynamic error handling.",
+    "image": "/Screenshot 2026-07-04 010751.png",
+    "demo": "https://github-finder-project-nu.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/GITHUB-FINDER-PROJECT.git",
+    "meters": [
+      { "label": "API Integration", "percentage": 95 },
+      { "label": "JavaScript Logic", "percentage": 85 },
+      { "label": "UI/UX Design", "percentage": 70 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Weather App",
+    "shortDesc": "Weather application using API.",
+    "longDesc": "A dynamic weather dashboard that fetches real-time meteorological data using a third-party API. It provides users with instant access to current temperatures, conditions, and location-based forecasting.",
+    "image": "/Screenshot 2026-06-21 161859.png",
+    "demo": "https://weather-poject.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/WeatherPoject.git",
+    "meters": [
+      { "label": "Data Fetching", "percentage": 90 },
+      { "label": "JavaScript", "percentage": 80 },
+      { "label": "Responsive Layout", "percentage": 75 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Todo-List",
+    "shortDesc": "Modern todo list application using HTML CSS JS.",
+    "longDesc": "An interactive task management application built with modern web technologies. Features include task creation, completion toggling, and deletion, ensuring users can efficiently track their daily goals.",
+    "image": "/Screenshot 2026-07-14 172536.png",
+    "demo": "https://todojsx-seven.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/TODOJSX.git",
+    "meters": [
+      { "label": "React.js", "percentage": 90 },
+      { "label": "State Management", "percentage": 85 },
+      { "label": "CSS Styling", "percentage": 80 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Portfolio Website",
+    "shortDesc": "Personal portfolio showcasing my projects and skills.",
+    "longDesc": "A fully responsive, premium portfolio website built to showcase my technical skills, projects, and resume. Features modern glassmorphism design, theme toggling, and optimized asset delivery.",
+    "image": "/Screenshot 2026-07-04 215600.png",
+    "demo": "https://shivammaurya-tech.github.io/Portfolio/",
+    "github": "https://github.com/ShivamMaurya-tech/Portfolio.git",
+    "meters": [
+      { "label": "Html 5", "percentage": 95 },
+      { "label": "Advanced CSS", "percentage": 90 },
+      { "label": "Animations", "percentage": 85 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Number-Guessing-Game",
+    "shortDesc": "A number guessing game with interactive gameplay.",
+    "longDesc": "A logic-based interactive game where users attempt to guess a randomly generated number. Features instant feedback on high/low guesses, a tracking counter for attempts, and an engaging user interface.",
+    "image": "/Screenshot 2026-07-04 014103.png",
+    "demo": "https://number-guessing-mini-project.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/Number-Guessing-Mini-Project.git",
+    "meters": [
+      { "label": "Game Logic", "percentage": 90 },
+      { "label": "JavaScript", "percentage": 85 },
+      { "label": "User Interaction", "percentage": 80 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "E-commerce Website",
+    "shortDesc": "Responsive e-commerce website with product listings.",
+    "longDesc": "A front-end e-commerce platform featuring dynamic product listings, category filtering, and a functional shopping cart system. Built with a focus on responsive design for seamless mobile and desktop shopping.",
+    "image": "/Screenshot 2026-07-02 142758.png",
+    "demo": "https://e-commercewebsite-jade.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/E-COMMERCE-WEBSITE.git",
+    "meters": [
+      { "label": "Array Methods", "percentage": 85 },
+      { "label": "Async JS", "percentage": 80 },
+      { "label": "JavaScript", "percentage": 90 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Jokes World",
+    "shortDesc": "A collection of jokes with interactive features.",
+    "longDesc": "An entertainment application that fetches and displays a collection of random jokes. Built using asynchronous JavaScript and API integrations to provide an infinite stream of interactive content.",
+    "image": "/Screenshot 2026-06-21 165107.png",
+    "demo": "https://jokes-world-project.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/JokesWorld-Project.git",
+    "meters": [
+      { "label": "REST API", "percentage": 90 },
+      { "label": "Async JS", "percentage": 85 },
+      { "label": "CSS Styling", "percentage": 70 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Quiz App",
+    "shortDesc": "JavaScript quiz application with score tracking.",
+    "longDesc": "Built an interactive quiz application featuring timer-based multiple-choice questions. Implemented dynamic question rendering, real-time score calculation, and robust answer validation.",
+    "image": "/Screenshot 2025-09-09 190413.png",
+    "demo": "https://shivammaurya-tech.github.io/Online-Quiz-/",
+    "github": "https://github.com/ShivamMaurya-tech/Online-Quiz-.git",
+    "meters": [
+      { "label": "Algorithm Logic", "percentage": 95 },
+      { "label": "Array Methods", "percentage": 90 },
+      { "label": "Event Handling", "percentage": 85 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Stopwatch Timer",
+    "shortDesc": "A stopwatch timer application with start, stop, and reset.",
+    "longDesc": "A precision stopwatch utility built with JavaScript's setInterval functions. Features exact millisecond tracking, lap time recording, and start/pause/reset functionality within a clean interface.",
+    "image": "/Screenshot 2026-04-25 182829.png",
+    "demo": "https://stopwatch-mini-project-six.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/StopwatchMini-Project.git",
+    "meters": [
+      { "label": "Timing Logic", "percentage": 95 },
+      { "label": "JavaScript", "percentage": 85 },
+      { "label": "UI Design", "percentage": 75 }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Periodic Table",
+    "shortDesc": "Interactive periodic table with detailed information.",
+    "longDesc": "An educational tool presenting the complete periodic table of elements. Users can click on individual elements to reveal detailed scientific information, atomic weights, and categorizations.",
+    "image": "/Screenshot 2026-06-21 163911.png",
+    "demo": "https://periodic-table-project-three.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/Periodic-Table-Project.git",
+    "meters": [
+      { "label": "Data Structuring", "percentage": 90 },
+      { "label": "CSS Grid", "percentage": 95 },
+      { "label": "Interactive DOM", "percentage": 80 }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Netflix Card",
+    "shortDesc": "This Netflix Card Contains some adventures movies.",
+    "longDesc": "A UI/UX clone component replicating the iconic Netflix media card hover effect. Demonstrates advanced CSS transitions, absolute positioning, and responsive image handling.",
+    "image": "/Screenshot 2026-07-10 131402.png",
+    "demo": "https://netflix-card-six.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/NetflixCard.git",
+    "meters": [
+      { "label": "CSS Animations", "percentage": 95 },
+      { "label": "UI Design", "percentage": 90 },
+      { "label": "React.js", "percentage": 85 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Pokemon Card",
+    "shortDesc": "Interactive Pokemon Card with detailed information.",
+    "longDesc": "A dynamic card generator that fetches data from the PokeAPI. Renders character stats, elemental types, and high-quality sprites inside beautifully styled trading cards.",
+    "image": "/Screenshot 2026-07-22 135037.png",
+    "demo": "https://pokemon-card-template.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/POKEMON-CARD-TEMPLATE.git",
+    "meters": [
+      { "label": "API Fetching", "percentage": 90 },
+      { "label": "CSS Styling", "percentage": 85 },
+      { "label": "React.js", "percentage": 80 }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "World Atlas",
+    "shortDesc": "Interactive World Atlas with country descriptions.",
+    "longDesc": "A comprehensive geographical application that pulls global data via REST API. Users can explore country demographics, flags, capitals, and detailed descriptions in an interactive UI.",
+    "image": "/Screenshot 2026-08-02 192219.png",
+    "demo": "https://world-atlas-project-lake.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/WORLD-ATLAS-PROJECT.git",
+    "meters": [
+      { "label": "REST API", "percentage": 95 },
+      { "label": "Data Mapping", "percentage": 85 },
+      { "label": "React.js", "percentage": 80 }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Currency Converter",
+    "shortDesc": "Fetches up-to-date foreign exchange rates via REST APIs.",
+    "longDesc": "A React currency converter is a lightweight web application that calculates real-time exchange rates between different global currencies. Users type an amount, pick source and target units from dropdown menus, and instantly view converted values powered by live API data.",
+    "image": "/Screenshot 2026-08-11 203547.png",
+    "demo": "https://currency-converter-smoky-three-76.vercel.app/",
+    "github": "https://github.com/ShivamMaurya-tech/Currency-Converter.git",
+    "meters": [
+      { "label": "REST API", "percentage": 95 },
+      { "label": "Currency swap", "percentage": 85 },
+      { "label": "React.js", "percentage": 80 }
+    ]
+  }
+]
