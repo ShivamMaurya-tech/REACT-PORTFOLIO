@@ -44,15 +44,8 @@ const App = () => {
     },
   ]);
 
-  // FIX 3: Cleaned up the return statement
   return (
     <ThemeProvider>
-      {/* 
-        The RouterProvider automatically looks at the 'router' array above 
-        and renders the correct components based on the current URL.
-        No need to manually list <Home />, <About />, etc. here!
-      */}
-
       <RouterProvider router={router} />
     </ThemeProvider>
   );
