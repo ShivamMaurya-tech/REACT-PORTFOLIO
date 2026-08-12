@@ -42,7 +42,7 @@ export const Home = () => {
               </NavLink>
 
               <a
-                href="/Shivam_Maurya_ATS_Resume_90plus_ATS1.pdf"
+                href="/Shivam_Maurya_ATS_Resume_90plus_ATS.pdf"
                 download="ShivamMaurya_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
