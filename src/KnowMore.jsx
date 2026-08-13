@@ -1,10 +1,17 @@
 import { useParams, useNavigate } from "react-router-dom";
 import projectData from "./JSON/Project.json"; // Import your JSON directly
 import "./KnowMore.css";
+import { useEffect } from "react";
+import { AnimatedMeter } from "./PAGES/AnimatedMeters";
 
 export const KnowMore = () => {
   const { id } = useParams(); // Grabs the project ID from the URL
   const navigate = useNavigate();
+
+  // 2. ADD THIS BLOCK: It forces the page to scroll to the top on load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Find the exact project from the JSON that matches the URL ID
   const project = projectData.find((p) => String(p.id) === String(id));
@@ -32,7 +39,7 @@ export const KnowMore = () => {
             <p className="knowmore-desc">{project.longDesc}</p>
 
             {/* === STATIC METERS SECTION === */}
-            {project.meters && project.meters.length > 0 && (
+            {/* {project.meters && project.meters.length > 0 && (
               <div className="knowmore-meters-container">
                 <h4 className="meters-title">
                   Tech Proficiency & Implementation
@@ -51,6 +58,24 @@ export const KnowMore = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            )} */}
+
+            {/* === ANIMATED METERS SECTION === */}
+            {project.meters && project.meters.length > 0 && (
+              <div className="knowmore-meters-container">
+                <h4 className="meters-title">
+                  Tech Proficiency & Implementation
+                </h4>
+                <div className="meters-grid">
+                  {project.meters.map((meter, index) => (
+                    <AnimatedMeter
+                      key={index}
+                      label={meter.label}
+                      targetPercentage={meter.percentage}
+                    />
+                  ))}
+                </div>
               </div>
             )}
 

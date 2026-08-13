@@ -114,70 +114,106 @@
 /* =========================================
    ANIMATED METERS (Progress Bars)
 ========================================= */
+/* =========================================
+   ANIMATED METERS (Progress Bars) - DARK MODE BASE
+========================================= */
+
 .knowmore-meters-container {
-  margin-bottom: 2.5rem;
-  background: rgba(15, 23, 42, 0.4);
+  margin: 2rem 0;
   padding: 1.5rem;
+  /* Dark mode background */
+  background-color: rgba(15, 23, 42, 0.4);
   border-radius: 12px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
 }
 
 .meters-title {
-  font-size: 1.15rem;
-  color: #f8fafc;
-  margin-bottom: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  border-bottom: 1px solid rgba(168, 85, 247, 0.3);
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  color: #f8fafc; /* Light text for dark mode */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
-.static-meter {
-  margin-bottom: 1.2rem;
+.meters-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.static-meter:last-child {
-  margin-bottom: 0;
+.meter-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.meter-label-row {
+.meter-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #e2e8f0;
-  font-size: 0.95rem;
+  align-items: center;
+}
+
+.meter-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cbd5e1; /* Off-white for dark mode */
+  transition: color 0.3s ease;
 }
 
 .meter-percentage {
-  color: #a855f7;
+  font-size: 1rem;
   font-weight: 700;
+  color: #a855f7; /* Purple to match your gradient theme */
+  transition: color 0.3s ease;
 }
 
-.meter-track {
+.meter-bar-bg {
   width: 100%;
-  height: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Dark mode track */
+  border-radius: 999px;
   overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
-.meter-fill {
+.meter-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #a855f7, #ec4899);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
-
-  transform-origin: left;
-  animation: fillMeter 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  border-radius: 999px;
+  /* Vibrant gradient for dark mode */
+  background: linear-gradient(90deg, #a855f7 0%, #ec4899 100%);
+  box-shadow: 0 2px 4px rgba(168, 85, 247, 0.4);
+  transition: background 0.3s ease;
 }
 
-@keyframes fillMeter {
-  from {
-    transform: scaleX(0);
+/* Shimmer Animation */
+.meter-bar-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
   }
-  to {
-    transform: scaleX(1);
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -190,6 +226,7 @@
   gap: 1.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
+  transition: border-color 0.3s ease;
 }
 
 .project-links {
@@ -255,27 +292,35 @@ body.light .knowmore-desc {
   color: #475569;
 }
 
+/* --- LIGHT MODE METERS --- */
 body.light .knowmore-meters-container {
-  background-color: #d9e1ea;
+  background-color: #f8f9fa;
   border-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 body.light .meters-title {
   color: #0f172a;
 }
 
-body.light .meter-label-row {
+body.light .meter-label {
   color: #334155;
 }
 
 body.light .meter-percentage {
-  color: #7e22ce;
+  color: #3182ce; /* Blue for light mode */
 }
 
-body.light .meter-track {
-  background-color: #d9e1ea;
+body.light .meter-bar-bg {
+  background-color: #e2e8f0;
 }
 
+body.light .meter-bar-fill {
+  background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+  box-shadow: 0 2px 4px rgba(49, 130, 206, 0.4);
+}
+
+/* --- LIGHT MODE ACTIONS --- */
 body.light .knowmore-actions {
   border-top-color: rgba(0, 0, 0, 0.1);
 }
