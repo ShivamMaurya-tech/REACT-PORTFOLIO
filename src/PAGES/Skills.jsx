@@ -9,6 +9,7 @@ import {
   faGitAlt,
   faGithub,
   faPython,
+  faTailwindCss,
 } from "@fortawesome/free-brands-svg-icons";
 // Import solid icons
 import { faCode } from "@fortawesome/free-solid-svg-icons";
@@ -44,6 +45,15 @@ export const Skills = () => {
             {/* Added 'react' class */}
             <FontAwesomeIcon icon={faReact} className="skill-icon react" />
             <h3>React</h3>
+          </div>
+
+          <div className="skill-card">
+            {/* Added 'tailwind' class */}
+            <FontAwesomeIcon
+              icon={faTailwindCss}
+              className="skill-icon tailwind"
+            />
+            <h3>Tailwind</h3>
           </div>
 
           <div className="skill-card">

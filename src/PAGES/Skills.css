@@ -190,48 +190,6 @@ body.light .skill-card .skill-icon.github {
   color: #0f172a;
 }
 
-/* 2. Custom Hover Glows (Applied when the card is hovered) */
-/* .skill-card:hover .skill-icon.html,
-body.light .skill-card:hover .skill-icon.html {
-  filter: drop-shadow(0 0 15px rgba(227, 79, 38, 0.5))
-}
-.skill-card:hover .skill-icon.css,
-body.light .skill-card:hover .skill-icon.css {
-  filter: drop-shadow(0 0 15px rgba(21, 114, 182, 0.5));
-}
-.skill-card:hover .skill-icon.js,
-body.light .skill-card:hover .skill-icon.js {
-  filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.5));
-}
-.skill-card:hover .skill-icon.react,
-body.light .skill-card:hover .skill-icon.react {
-  filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.5));
-}
-.skill-card:hover .skill-icon.java,
-body.light .skill-card:hover .skill-icon.java {
-  filter: drop-shadow(0 0 15px rgba(248, 152, 32, 0.5));
-}
-.skill-card:hover .skill-icon.git,
-body.light .skill-card:hover .skill-icon.git {
-  filter: drop-shadow(0 0 15px rgba(240, 80, 50, 0.5));
-}
-.skill-card:hover .skill-icon.python,
-body.light .skill-card:hover .skill-icon.python {
-  filter: drop-shadow(0 0 15px rgba(55, 118, 171, 0.5));
-}
-.skill-card:hover .skill-icon.vscode,
-body.light .skill-card:hover .skill-icon.vscode {
-  filter: drop-shadow(0 0 15px rgba(0, 122, 204, 0.5));
-}
-
-/* GitHub Glow adapts to Light/Dark Mode */
-/* .skill-card:hover .skill-icon.github {
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
-}
-body.light .skill-card:hover .skill-icon.github {
-  filter: drop-shadow(0 0 15px rgba(15, 23, 42, 0.4));
-} */
-
 /* =========================================
    📱 MOBILE RESPONSIVENESS
 ========================================= */

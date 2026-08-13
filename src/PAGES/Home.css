@@ -261,12 +261,6 @@
   }
 }
 
-/* Pause animation on hover */
-/* .hero-image-container:hover .orbit-icon,
-.hero-image-container:hover::before {
-  animation-play-state: paused;
-} */
-
 .orbit-icon:hover {
   transform: scale(1.2);
   cursor: pointer;
