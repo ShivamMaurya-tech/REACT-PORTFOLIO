@@ -21,11 +21,6 @@ export const Projects = () => {
           {/* 3. The Map Function renders all cards automatically */}
           {data.map((project) => (
             <div className="project-card" key={project.id}>
-              <KnowMore
-                selectedProject={selectedProject}
-                setSelectedProject={setSelectedProject}
-                data={data}
-              />
               <div className="card-image-wrapper">
                 <img src={project.image} alt={project.title} />
               </div>
@@ -69,6 +64,12 @@ export const Projects = () => {
             </div>
           ))}
         </div>
+        {selectedProject && (
+          <KnowMore
+            selectedProject={selectedProject}
+            setSelectedProject={setSelectedProject}
+          />
+        )}
       </div>
     </section>
   );
