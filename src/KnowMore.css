@@ -1,75 +1,60 @@
 /* =========================================
-   KNOW MORE MODAL OVERLAY (Fixed Background)
+   KNOW MORE STANDALONE CONTAINER
 ========================================= */
 .knowmore-standalone-section {
-  position: fixed; /* This makes it pop up over the screen */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999; /* Ensures it sits above your header and footer */
-
+  padding-top: 5rem;
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem; /* Keeps card from touching screen edges */
-  box-sizing: border-box;
 
-  font-family: "Outfit", sans-serif;
-
-  /* Matches the Global Dark Mode Background */
-  background-color: rgba(
-    11,
-    15,
-    25,
-    0.85
-  ); /* Added transparency for modal effect */
-  backdrop-filter: blur(8px); /* Blurs the page behind it */
-  -webkit-backdrop-filter: blur(8px);
+  /* Matches the Global Dark Mode Background exactly */
+  background-color: #0b0f19;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+  background-size: cover;
+  background-attachment: fixed;
 
   transition: background-color 0.3s ease;
 }
 
 /* =========================================
-   PREMIUM GLASSMORPHISM CARD (Card Size)
+   PREMIUM GLASSMORPHISM CARD (Compact Size)
 ========================================= */
 .knowmore-card {
   background: linear-gradient(
     145deg,
-    rgba(30, 41, 59, 0.9),
-    rgba(15, 23, 42, 0.8)
+    rgba(30, 41, 59, 0.6),
+    rgba(15, 23, 42, 0.3)
   );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
 
   width: 100%;
-  max-width: 600px; /* Shrunk from 750px for a better card shape */
-  max-height: 90vh; /* Prevents the card from being taller than the screen */
-  overflow-y: auto; /* Adds an internal scrollbar if content is too long */
+  /* Reduced from 1000px to 750px for a perfectly compact card */
+  max-width: 750px;
+  margin: 0 auto;
+  overflow: hidden;
 
   box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 20px 50px rgba(0, 0, 0, 0.3),
     inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  animation: slideUpFade 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-/* Custom Scrollbar for the card */
-.knowmore-card::-webkit-scrollbar {
-  width: 6px;
-}
-.knowmore-card::-webkit-scrollbar-thumb {
-  background: rgba(168, 85, 247, 0.5);
-  border-radius: 10px;
+  animation: slideUpFade 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 @keyframes slideUpFade {
   from {
     opacity: 0;
-    transform: translateY(40px) scale(0.95);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -78,7 +63,8 @@
 ========================================= */
 .knowmore-image-wrapper {
   width: 100%;
-  height: 250px; /* Reduced to fit the new card proportions perfectly */
+  /* Reduced height from 400px to 300px to fit the smaller card */
+  height: 300px;
   background: rgba(15, 23, 42, 0.6);
   display: flex;
   justify-content: center;
@@ -90,7 +76,7 @@
 .knowmore-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Changed to cover so it fills the banner space */
+  object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -102,11 +88,13 @@
    CONTENT & TYPOGRAPHY
 ========================================= */
 .knowmore-content {
-  padding: 2rem; /* Adjusted for smaller card */
+  /* Reduced padding to fit the smaller card nicely */
+  padding: 2.5rem;
 }
 
 .knowmore-title {
-  font-size: 2rem;
+  /* Scaled font down slightly to match smaller card */
+  font-size: 2.25rem;
   font-weight: 800;
   margin-bottom: 0.8rem;
   background: linear-gradient(135deg, #f8fafc, #a855f7);
@@ -117,17 +105,17 @@
 }
 
 .knowmore-desc {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #cbd5e1;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* =========================================
    ANIMATED METERS (Progress Bars)
 ========================================= */
 .knowmore-meters-container {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   background: rgba(15, 23, 42, 0.4);
   padding: 1.5rem;
   border-radius: 12px;
@@ -135,7 +123,7 @@
 }
 
 .meters-title {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: #f8fafc;
   margin-bottom: 1.2rem;
   font-weight: 700;
@@ -145,7 +133,7 @@
 }
 
 .static-meter {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .static-meter:last-child {
@@ -155,10 +143,10 @@
 .meter-label-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   color: #e2e8f0;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 .meter-percentage {
@@ -168,7 +156,7 @@
 
 .meter-track {
   width: 100%;
-  height: 6px;
+  height: 8px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -179,6 +167,7 @@
   background: linear-gradient(90deg, #a855f7, #ec4899);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+
   transform-origin: left;
   animation: fillMeter 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
@@ -198,27 +187,27 @@
 .knowmore-actions {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 1.5rem;
+  padding-top: 2rem;
 }
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .project-links .btn {
   flex: 1;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 0.9rem;
+  font-size: 1.05rem;
   text-align: center;
 }
 
 .back-btn-wrapper .go-back-btn {
   width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 0.9rem;
+  font-size: 1.05rem;
   border: 1px dashed rgba(255, 255, 255, 0.3);
   color: #cbd5e1;
   background: transparent;
@@ -238,26 +227,21 @@
 ========================================= */
 
 body.light .knowmore-standalone-section {
-  background-color: rgba(
-    217,
-    225,
-    234,
-    0.85
-  ); /* Translucent light mode overlay */
+  background-color: #d9e1ea;
 }
 
 body.light .knowmore-card {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 1),
-    rgba(240, 240, 240, 0.95)
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.4)
   );
   border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 20px 50px rgba(31, 38, 135, 0.15);
+  box-shadow: 0 20px 50px rgba(31, 38, 135, 0.08);
 }
 
 body.light .knowmore-image-wrapper {
-  background-color: #e2e8f0;
+  background-color: #d9e1ea;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -272,7 +256,7 @@ body.light .knowmore-desc {
 }
 
 body.light .knowmore-meters-container {
-  background-color: #f1f5f9;
+  background-color: #d9e1ea;
   border-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -289,7 +273,7 @@ body.light .meter-percentage {
 }
 
 body.light .meter-track {
-  background-color: #cbd5e1;
+  background-color: #d9e1ea;
 }
 
 body.light .knowmore-actions {
