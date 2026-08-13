@@ -3,6 +3,11 @@
 ========================================= */
 .knowmore-standalone-section {
   padding-top: 5rem;
+  /* Added left and right padding so content never touches screen edges */
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-bottom: 2rem;
+
   font-family: "Outfit", sans-serif;
   min-height: 100vh;
   display: flex;
@@ -24,6 +29,7 @@
 /* =========================================
    PREMIUM GLASSMORPHISM CARD (Compact Size)
 ========================================= */
+
 .knowmore-card {
   background: linear-gradient(
     145deg,
@@ -35,9 +41,11 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
 
+  /* Made width slightly less than 100% to guarantee side margins on tiny screens */
   width: 100%;
-  /* Reduced from 1000px to 750px for a perfectly compact card */
-  max-width: 750px;
+  max-width: 400px;
+
+  /* Centers the card perfectly */
   margin: 0 auto;
   overflow: hidden;
 
@@ -63,8 +71,8 @@
 ========================================= */
 .knowmore-image-wrapper {
   width: 100%;
-  /* Reduced height from 400px to 300px to fit the smaller card */
-  height: 300px;
+  /* Reduced height from 300px to 220px to fit the smaller card */
+  height: 220px;
   background: rgba(15, 23, 42, 0.6);
   display: flex;
   justify-content: center;
@@ -76,7 +84,7 @@
 .knowmore-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -88,13 +96,13 @@
    CONTENT & TYPOGRAPHY
 ========================================= */
 .knowmore-content {
-  /* Reduced padding to fit the smaller card nicely */
-  padding: 2.5rem;
+  /* Reduced padding from 2.5rem to 1.5rem to fit the smaller card nicely */
+  padding: 1.5rem;
 }
 
 .knowmore-title {
-  /* Scaled font down slightly to match smaller card */
-  font-size: 2.25rem;
+  /* Scaled font down slightly (from 2.25rem to 1.75rem) to match smaller card */
+  font-size: 1.75rem;
   font-weight: 800;
   margin-bottom: 0.8rem;
   background: linear-gradient(135deg, #f8fafc, #a855f7);
@@ -105,22 +113,19 @@
 }
 
 .knowmore-desc {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #cbd5e1;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* =========================================
-   ANIMATED METERS (Progress Bars)
-========================================= */
 /* =========================================
    ANIMATED METERS (Progress Bars) - DARK MODE BASE
 ========================================= */
 
 .knowmore-meters-container {
-  margin: 2rem 0;
-  padding: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1.2rem;
   /* Dark mode background */
   background-color: rgba(15, 23, 42, 0.4);
   border-radius: 12px;
@@ -130,10 +135,10 @@
 }
 
 .meters-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #f8fafc; /* Light text for dark mode */
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
@@ -142,14 +147,14 @@
 .meters-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .meter-wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .meter-header {
@@ -159,14 +164,14 @@
 }
 
 .meter-label {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #cbd5e1; /* Off-white for dark mode */
   transition: color 0.3s ease;
 }
 
 .meter-percentage {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #a855f7; /* Purple to match your gradient theme */
   transition: color 0.3s ease;
@@ -174,7 +179,7 @@
 
 .meter-bar-bg {
   width: 100%;
-  height: 10px;
+  height: 8px; /* Slightly thinner bar for small card */
   background-color: rgba(255, 255, 255, 0.1); /* Dark mode track */
   border-radius: 999px;
   overflow: hidden;
@@ -223,28 +228,28 @@
 .knowmore-actions {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   transition: border-color 0.3s ease;
 }
 
 .project-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .project-links .btn {
   flex: 1;
-  padding: 0.9rem;
-  font-size: 1.05rem;
+  padding: 0.8rem;
+  font-size: 0.95rem;
   text-align: center;
 }
 
 .back-btn-wrapper .go-back-btn {
   width: 100%;
-  padding: 0.9rem;
-  font-size: 1.05rem;
+  padding: 0.8rem;
+  font-size: 0.95rem;
   border: 1px dashed rgba(255, 255, 255, 0.3);
   color: #cbd5e1;
   background: transparent;
